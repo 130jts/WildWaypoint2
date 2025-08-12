@@ -1,0 +1,26 @@
+{
+  "name": "Wild Waypoints",
+  "short_name": "Waypoints",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FFFCF5",
+  "theme_color": "#184E3B",
+  "icons": [
+    {
+      "src": "/logo.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/logo.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "/icons/waypoint.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

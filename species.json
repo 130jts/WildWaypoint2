@@ -1,0 +1,106 @@
+{
+  "monarch": {
+    "common": "Monarch Butterfly",
+    "scientific": "Danaus plexippus",
+    "snapshot": "Iconic migrant traveling thousands of miles; needs milkweed for caterpillars and nectar along the route.",
+    "facts": [
+      "Caterpillars eat only milkweed",
+      "Fall migration to Mexico",
+      "Adults refuel on asters/goldenrod"
+    ],
+    "tips": [
+      "Plant native milkweeds",
+      "Avoid pesticides near blooms"
+    ],
+    "points": [
+      {
+        "lat": 39.8,
+        "lon": -98.6,
+        "label": "US mid-continent"
+      },
+      {
+        "lat": 35.6,
+        "lon": -82.6,
+        "label": "WNC example"
+      }
+    ]
+  },
+  "gulf_fritillary": {
+    "common": "Gulf Fritillary",
+    "scientific": "Agraulis vanillae",
+    "snapshot": "Brilliant orange butterfly; caterpillars rely on passionflower vines (Passiflora).",
+    "facts": [
+      "Hosts: Passiflora spp.",
+      "Adults nectar widely",
+      "Expanding range"
+    ],
+    "tips": [
+      "Grow native passionflower",
+      "Provide continuous nectar"
+    ],
+    "points": [
+      {
+        "lat": 29.7,
+        "lon": -95.3,
+        "label": "TX"
+      },
+      {
+        "lat": 33.7,
+        "lon": -84.4,
+        "label": "GA"
+      }
+    ]
+  },
+  "northern_flicker": {
+    "common": "Northern Flicker",
+    "scientific": "Colaptes auratus",
+    "snapshot": "Ground-feeding woodpecker; migratory in parts of its range; eats ants, fruits and seeds in winter.",
+    "facts": [
+      "Eats ants/ground insects",
+      "Uses open woods/edges",
+      "Cavity nester"
+    ],
+    "tips": [
+      "Leave some leaf litter",
+      "Plant berry shrubs (sumac, dogwood)"
+    ],
+    "points": [
+      {
+        "lat": 40.7,
+        "lon": -74.0,
+        "label": "NE US"
+      },
+      {
+        "lat": 34.1,
+        "lon": -118.2,
+        "label": "SoCal"
+      }
+    ]
+  },
+  "ruby_throated_hummingbird": {
+    "common": "Ruby-throated Hummingbird",
+    "scientific": "Archilochus colubris",
+    "snapshot": "Eastern North America\u2019s hummingbird; seeks tubular red/orange flowers and small insects.",
+    "facts": [
+      "Migrates across Gulf",
+      "Prefers tubular blooms",
+      "Aggressive at feeders"
+    ],
+    "tips": [
+      "Plant bee balm/cardinal flower",
+      "Avoid neonics"
+    ],
+    "points": [
+      {
+        "lat": 38.9,
+        "lon": -77.0,
+        "label": "Mid-Atlantic"
+      },
+      {
+        "lat": 35.2,
+        "lon": -80.8,
+        "label": "Carolinas"
+      }
+    ]
+  }
+}

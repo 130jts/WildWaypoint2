@@ -1,0 +1,45 @@
+{
+  "NC": [
+    {
+      "common": "Common Milkweed",
+      "scientific": "Asclepias syriaca",
+      "supports": [
+        "monarch"
+      ],
+      "role": [
+        "host",
+        "nectar"
+      ],
+      "bloom": "Jun\u2013Aug",
+      "image": "/logo.png",
+      "benefit": "Caterpillar host; nectar for fall migrants"
+    },
+    {
+      "common": "Cardinal Flower",
+      "scientific": "Lobelia cardinalis",
+      "supports": [
+        "ruby_throated_hummingbird"
+      ],
+      "role": [
+        "nectar"
+      ],
+      "bloom": "Jul\u2013Sep",
+      "image": "/logo.png",
+      "benefit": "Tubular red blooms ideal for hummingbirds"
+    },
+    {
+      "common": "Purple Coneflower",
+      "scientific": "Echinacea purpurea",
+      "supports": [
+        "monarch",
+        "gulf_fritillary"
+      ],
+      "role": [
+        "nectar"
+      ],
+      "bloom": "Jun\u2013Sep",
+      "image": "/logo.png",
+      "benefit": "High-nectar landing pad; seeds for birds later"
+    }
+  ]
+}
