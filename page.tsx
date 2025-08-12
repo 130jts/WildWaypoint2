@@ -1,47 +1,29 @@
 'use client';
 import React, { useEffect, useState } from 'react';
 import DonationBar from '@/components/DonationBar';
-import Badge from '@/components/Badge';
-import { useSearchParams } from 'next/navigation';
+import species from '@/data/species.json';
+import tips from '@/data/dailyTips.json';
+import Link from 'next/link';
 
-export default function SupportPage(){
-  const sp = useSearchParams();
-  const status = sp.get('status');
-  const [isSub,setIsSub] = useState(false);
-  const [isFounder,setIsFounder] = useState(false);
-
-  useEffect(()=>{
-    if (status === 'success') {
-      if (!localStorage.getItem('ww_founding_member')) localStorage.setItem('ww_founding_member','true');
-      localStorage.setItem('ww_subscriber','true');
-    }
-  },[status]);
-
-  useEffect(()=>{
-    setIsSub(localStorage.getItem('ww_subscriber') === 'true');
-    setIsFounder(localStorage.getItem('ww_founding_member') === 'true');
-  },[]);
-
-  const startCheckout = async (plan:'monthly'|'yearly')=>{
-    try{
-      const r = await fetch('/api/checkout', { method:'POST', body: JSON.stringify({ plan }) });
-      const j = await r.json();
-      if (j.url) window.location.href = j.url;
-    }catch{}
-  };
-
+export default function HomePage(){
+  const [tip,setTip] = useState<string>('');
+  useEffect(()=>{ setTip(tips[Math.floor(Math.random()*tips.length)]); },[]);
   return (
     <main>
-      <h1>Support & Subscribe</h1>
+      <h1>Nature’s pit stop</h1>
+      <p>Track migration, plant natives, and log pit stops. 2% of subscriptions are donated to conservation.</p>
       <DonationBar/>
-      <div className="card" style={{marginTop:12,display:'flex',gap:8,alignItems:'center'}}>
-        <button className="btn" onClick={()=>startCheckout('monthly')}>Subscribe – Monthly (test)</button>
-        <button className="btn" onClick={()=>startCheckout('yearly')}>Subscribe – Yearly (test)</button>
-        <span style={{marginLeft:8}}>Or demo it: <a href="/support?status=success">/support?status=success</a></span>
-      </div>
-      <div style={{marginTop:16,display:'flex',gap:16,alignItems:'center'}}>
-        {isSub && <span className="tag">Subscriber</span>}
-        {isFounder && <Badge type="founding" />}
+      <div className="card" style={{marginTop:16}}><strong>Daily tip:</strong> {tip}</div>
+      <h2 style={{marginTop:24}}>Migration highlights</h2>
+      <div style={{display:'grid',gridTemplateColumns:'repeat(auto-fill,minmax(220px,1fr))',gap:12}}>
+        {Object.entries(species).map(([id,s]:any)=>(
+          <div key={id} className="card">
+            <h3 style={{margin:'4px 0'}}>{s.common}</h3>
+            <div className="tag">{s.scientific}</div>
+            <p style={{marginTop:8}}>{s.snapshot}</p>
+            <Link className="btn" href={`/species/${id}`} style={{display:'inline-block',marginTop:8}}>Learn more</Link>
+          </div>
+        ))}
       </div>
     </main>
   );
